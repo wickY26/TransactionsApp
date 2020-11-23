@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TransactionsListContainer should render correctly 1`] = `
+<DocumentFragment>
+  <ul>
+    <li>
+      50
+    </li>
+  </ul>
+</DocumentFragment>
+`;

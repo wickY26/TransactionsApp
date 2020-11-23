@@ -1,0 +1,19 @@
+{
+  "accounts": [
+    {
+      "name": "Poyraz",
+      "surname": "Yilmaz",
+      "id": 0
+    },
+    {
+      "name": "Neslihan",
+      "surname": "Yilmaz",
+      "id": 1
+    },
+    {
+      "name": "Badem",
+      "surname": "Yilmaz",
+      "id": 2
+    }
+  ]
+}

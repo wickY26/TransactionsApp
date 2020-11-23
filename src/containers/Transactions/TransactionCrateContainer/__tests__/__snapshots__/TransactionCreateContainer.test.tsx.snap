@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TransactionCreateContainer should render correctly 1`] = `
+<DocumentFragment>
+  <button>
+    Button
+  </button>
+</DocumentFragment>
+`;
+
+exports[`TransactionCreateContainer should render redirect when onCreateTransaction is called 1`] = `
+<DocumentFragment>
+  Redirect
+  <button>
+    Button
+  </button>
+</DocumentFragment>
+`;
