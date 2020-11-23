@@ -30,6 +30,7 @@ That is for now...
 
 ## Things to add
 
+* E2E tests will be added with [Cypress](https://www.cypress.io/)
 * Right now there is no error handler
 * Styled components only used for demo purpose there should be more styles
 * Account balance details component for showing user transactions history
