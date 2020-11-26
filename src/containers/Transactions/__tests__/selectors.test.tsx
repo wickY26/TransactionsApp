@@ -1,4 +1,4 @@
-import { transactionsSelector } from '../selectors';
+import { transactionsSelector, accountsSelector } from '../selectors';
 
 const mockAccount = {name: 'Poyraz', surname: 'Yilmaz', id: 0};
 
@@ -11,12 +11,20 @@ const mockState = {
   },
 };
 
-describe('Accounts Selectors', () => {
+describe('Transactions Selectors', () => {
+
+  describe('TransactionsSelector' ,() => {
+
+    it('should returns transactions from given state', () => {
+      expect(transactionsSelector(mockState)).toEqual(mockState.transactions.transactions);
+    });
+    
+  });
 
   describe('AccountsSelector' ,() => {
 
-    it('should returns transaction from given state', () => {
-      expect(transactionsSelector(mockState)).toEqual(mockState.transactions.transactions);
+    it('should returns accounts from given state', () => {
+      expect(accountsSelector(mockState)).toEqual(mockState.accounts.accounts);
     });
     
   });

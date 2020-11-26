@@ -3,10 +3,13 @@ import { fireEvent, render, screen } from '@testing-library/react';
 
 import TransactionCreateForm from '..';
 
+const mockAccount = {name: 'Poyraz', surname: 'Yilmaz', id: 0};
+const mockAccount2 = {name: 'Neslihan', surname: 'Yilmaz', id: 1};
+const mockAccounts = [mockAccount, mockAccount2];
 const mockOnCreateTransaction = jest.fn();
 
 const renderComponent = () => render(
-  <TransactionCreateForm onCreateTransaction={mockOnCreateTransaction} />
+  <TransactionCreateForm onCreateTransaction={mockOnCreateTransaction} accounts={mockAccounts} />
 );
 
 describe('TransactionCreateForm', () => {
@@ -25,8 +28,15 @@ describe('TransactionCreateForm', () => {
   it('should call onCreateTransaction when form is submitted', () => {
     renderComponent();
 
-    fireEvent.change(screen.getByTestId('from'), { target: { value: '0' } });
-    fireEvent.change(screen.getByTestId('to'), { target: { value: '1' } });
+    const fromAutocomplete = screen.getByTestId('from-autocomplete');
+    const toAutocomplete = screen.getByTestId('to-autocomplete');
+
+    fireEvent.keyDown(fromAutocomplete, { key: 'ArrowDown' });
+    fireEvent.keyDown(fromAutocomplete, { key: 'Enter' });
+
+    fireEvent.keyDown(toAutocomplete, { key: 'ArrowDown' });
+    fireEvent.keyDown(toAutocomplete, { key: 'Enter' });
+
     fireEvent.change(screen.getByTestId('amount'), { target: { value: '250' } });
     fireEvent.change(screen.getByTestId('description'), { target: { value: 'Description' } });
     fireEvent.click(screen.getByTestId('submitBtn'));
@@ -41,9 +51,15 @@ describe('TransactionCreateForm', () => {
     const toField = screen.getByTestId('to') as HTMLInputElement;
     const amountField = screen.getByTestId('amount') as HTMLInputElement;
     const descriptionField = screen.getByTestId('description') as HTMLInputElement;
+    const fromAutocomplete = screen.getByTestId('from-autocomplete');
+    const toAutocomplete = screen.getByTestId('to-autocomplete');
 
-    fireEvent.change(screen.getByTestId('from'), { target: { value: '0' } });
-    fireEvent.change(screen.getByTestId('to'), { target: { value: '1' } });
+    fireEvent.keyDown(fromAutocomplete, { key: 'ArrowDown' });
+    fireEvent.keyDown(fromAutocomplete, { key: 'Enter' });
+
+    fireEvent.keyDown(toAutocomplete, { key: 'ArrowDown' });
+    fireEvent.keyDown(toAutocomplete, { key: 'Enter' });
+
     fireEvent.change(screen.getByTestId('amount'), { target: { value: '250' } });
     fireEvent.change(screen.getByTestId('description'), { target: { value: 'Description' } });
     fireEvent.click(screen.getByTestId('submitBtn'));

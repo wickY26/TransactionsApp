@@ -46,8 +46,8 @@ const App: FC = () => (
           <Route exact path="/transactions/create">
             <Header title="New Transaction" link="/transactions" backIcon/>
             <TransactionCreateContainer>
-              {({onCreateTransaction}) => (
-                <TransactionCreateForm onCreateTransaction={onCreateTransaction} />
+              {({onCreateTransaction, accounts}) => (
+                <TransactionCreateForm onCreateTransaction={onCreateTransaction} accounts={accounts} />
               )}
             </TransactionCreateContainer>
           </Route>

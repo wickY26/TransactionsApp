@@ -6,9 +6,11 @@ import { TransactionBody } from '../../types';
 
 const mockTransactionBody: TransactionBody = { from: 0, to: 1, amount: 50, description: 'description' };
 const mockDispatch = jest.fn();
+const mockSelector = jest.fn();
 const mockThunkCreateTransaction = jest.fn();
 
 jest.mock('react-redux', () => ({
+  useSelector: () => mockSelector(),
   useDispatch: () => mockDispatch,
 }));
 
