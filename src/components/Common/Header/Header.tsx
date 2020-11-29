@@ -18,7 +18,7 @@ const Header: FC<HeaderProps> = ({ title, link, backIcon }) => (
         </Typography>
       </Box>
       {
-        link && <Link to={link}>
+        link && <Link data-testid="header-link" to={link}>
           <IconButton>
             {
               backIcon ?

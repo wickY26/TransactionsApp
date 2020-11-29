@@ -1,0 +1,47 @@
+[
+  {
+    "from": {
+      "name": "Poyraz",
+      "surname": "Yilmaz",
+      "id": 0
+    },
+    "to": {
+      "name": "Neslihan",
+      "surname": "Yilmaz",
+      "id": 1
+    },
+    "amount": 50,
+    "description": "First transaction",
+    "id": 0
+  },
+  {
+    "from": {
+      "name": "Neslihan",
+      "surname": "Yilmaz",
+      "id": 1
+    },
+    "to": {
+      "name": "Badem",
+      "surname": "Yilmaz",
+      "id": 2
+    },
+    "amount": 25,
+    "description": "Second transaction",
+    "id": 1
+  },
+  {
+    "from": {
+      "name": "Badem",
+      "surname": "Yilmaz",
+      "id": 2
+    },
+    "to": {
+      "name": "Poyraz",
+      "surname": "Yilmaz",
+      "id": 0
+    },
+    "amount": 25,
+    "description": "Third transaction",
+    "id": 2
+  }
+]

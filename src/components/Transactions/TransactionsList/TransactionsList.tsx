@@ -10,7 +10,7 @@ import { TransactionsListProps } from './types';
 import * as SC from './styles/StyledComponents';
 
 const TransactionsList: FC<TransactionsListProps> = ({ transactions }) => (
-  <List disablePadding>
+  <List data-testid="transactions-list" disablePadding>
     {
       transactions.map(({ from, to, amount, description, id }) => (
         <ListItem key={id}>

@@ -9,7 +9,7 @@ import React, { FC } from 'react';
 import { AccountsListProps } from './types';
 
 const AccountsList: FC<AccountsListProps> = ({ accounts }) => (
-  <List disablePadding>
+  <List data-testid="accounts-list" disablePadding>
     {
       accounts.map(({ name, surname, id }) => (
         <ListItem key={id}>

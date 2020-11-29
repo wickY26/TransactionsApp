@@ -2,7 +2,7 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app) with [Typescript](https://www.typescriptlang.org/).
 It also uses [Storybook](https://storybook.js.org/) for components demo and [Material-UI](https://material-ui.com/) for implementing material components
-and lastly [Styled-Components](https://styled-components.com/) for styling.
+and [Styled-Components](https://styled-components.com/) for styling and last [Cypress](https://www.cypress.io/) for E2E tests.
 
 ## Quick Start
 
@@ -21,6 +21,10 @@ with the packages ready you can start application (both client and server) by ru
 This project currently 100% coverage but still it is good to check that :D
 
 ### `npm test -- --coverage`
+
+To see some scenarios just run E2E tests with cypress test runner
+
+### `npm run e2e`
 
 You can also browse components via Storybook by running 
 
